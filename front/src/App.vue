@@ -1,28 +1,31 @@
 <template>
-  <div id="nav">
+  <div class="container">
+    <Header />
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import Header from '@/components/Header.vue'
+export default {
+  name: 'app', 
+  components:  {
+    Header
+  }
 }
+</script>
 
-#nav {
-  padding: 30px;
-
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Varela+Round&display=swap');
+#app {
+  margin: 0;
   a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+    text-decoration: none;
+  }
+  .container {
+    font-family: Ubuntu, Helvetica, Arial, sans-serif;
+    text-align: center;
+    color: black;
   }
 }
 </style>
